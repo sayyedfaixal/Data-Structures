@@ -3,40 +3,50 @@
 #define MAX 20
 int stack[MAX];
 int top = -1;
-void push() {
-  if (top == MAX - 1) {
+void push()
+{
+  if (top == MAX - 1)
+  {
     printf("StackOverflow....\n");
-  } else {
+  }
+  else
+  {
     int n;
     printf("Enter the number that you want to PUSH : ");
     scanf("%d", &n);
     stack[++top] = n;
   }
 }
-int pop() {
+int pop()
+{
   if (top == -1)
     printf("StackUnderflow...\n");
-  else {
+  else
+  {
     printf("Element Popped : %d\n", stack[top--]);
   }
 }
-void peek() {
+void peek()
+{
   if (top == -1)
     printf("Sorry, StackUnderflow no elements to peek\n");
   else
     printf("Element at the top of the stack :  %d \n", stack[top]);
 }
 
-int main() {
+int main()
+{
   int choice;
-  do {
+  do
+  {
     printf("1.PUSH\n");
     printf("2.POP\n");
     printf("3.PEEK\n");
     printf("4.EXIT\n");
     printf("Enter the choice : \n");
     scanf("%d", &choice);
-    switch (choice) {
+    switch (choice)
+    {
     case 1:
       push();
       break;
